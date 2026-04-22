@@ -2,15 +2,15 @@
 
 **Systems for Niche Agentic Programming**
 
-An AI-powered agentic system for safe, evidence-based medical dosage calculations. This project demonstrates how to bridge large language models with deterministic Python logic, knowledge retrieval, and persistent memory to create production-ready healthcare applications.
+An AI-powered system for safe, evidence-based medical dosage calculations. This project shows how large language models can work alongside deterministic Python logic, knowledge retrieval, and persistent memory to support practical healthcare workflows.
 
 ## Project Overview
 
 ### The Problem
-Medical professionals need to ensure safe medication dosing while considering individual patient characteristics, drug-specific guidelines, and maximum dose limits. Errors can be critical.
+Medical professionals need to calculate doses safely while accounting for patient characteristics, drug-specific guidance, and maximum dose limits. Even small mistakes can have serious consequences.
 
 ### The Solution
-SNAP combines:
+SNAP brings together:
 - **Gemini LLM** for intelligent reasoning and patient interaction
 - **Deterministic Python Tool** (compute_dosage) for mathematically precise dose calculations
 - **RAG System** with medical guidelines and drug information
@@ -18,12 +18,12 @@ SNAP combines:
 - **Interactive Streamlit UI** for medical professionals
 
 ### Key Features
-[*] Non-LLM tool ensures mathematical accuracy (no "hallucinations" in drug calculations)
-[*] RAG integrates current FDA and clinical guidelines
-[*] Complete audit trail for medical compliance
-[*] Memory system survives application restarts
-[*] Multi-modal interface (agentic chat + direct calculator)
-[*] Production-ready deployment on cloud platforms
+- Non-LLM tool for mathematically reliable dosage calculations
+- RAG integration with FDA and clinical guidance
+- Full audit trail support for compliance workflows
+- Persistent memory across app restarts
+- Multi-modal interface (agentic chat + direct calculator)
+- Deployment-ready for common cloud platforms
 
 ## Project Structure
 
@@ -85,7 +85,7 @@ Final-Project/
 4. **Configure environment**
    ```bash
    cp .env.example .env
-   # Edit .env and add your GOOGLE_API_KEY
+   # Add your GOOGLE_API_KEY to .env
    ```
 
 5. **Run tests**
@@ -103,24 +103,24 @@ The application will be available at `http://localhost:8501`
 ## Using the Application
 
 ### 1. Agent Dashboard
-Ask the medical dosage agent natural language questions:
+Ask the medical dosage agent questions in plain language:
 - "Calculate safe dosage for an 85kg patient on Amoxicillin at 25 mg/kg with max 500mg"
 - "What are the dosing guidelines for acetaminophen?"
 - "I have a 15kg child, what's the safe ibuprofen dose?"
 
-The agent uses:
+Behind the scenes, the agent uses:
 - **Compute Dosage Tool**: For precise calculations
 - **Knowledge Base**: For drug guidelines and safety info
 - **Gemini LLM**: For reasoning and patient context
 
 ### 2. Direct Dosage Calculator
-Enter patient weight, drug dose per kg, and maximum dose to immediately calculate safe dosage.
+Enter patient weight, dose per kg, and maximum dose to get a safe dosage result right away.
 
 ### 3. Knowledge Base Search
-Search medical guidelines for drug information, interaction warnings, and dosing protocols.
+Search medical guidance for drug information, interaction warnings, and dosing protocols.
 
 ### 4. History & Audit
-View all calculations and interactions. Export CSV for compliance records.
+Review past calculations and interactions, then export CSV records when needed.
 
 ## Testing
 
@@ -229,7 +229,7 @@ response = agent.process_request(
 ## Security & Privacy
 
 ### Secrets Management
-- ⚠️ **Never commit** `.env` files with API keys
+- ⚠️ Do not commit `.env` files that contain API keys
 - Use environment variables: `GOOGLE_API_KEY`
 - Example in `.env.example`
 
@@ -249,7 +249,7 @@ response = agent.process_request(
    ```
    GOOGLE_API_KEY = "your_key_here"
    ```
-5. Deploy!
+5. Deploy and test the app from the hosted URL.
 
 ### Google Cloud Platform (GCP)
 
@@ -281,7 +281,7 @@ docker run -p 8501:8501 -e GOOGLE_API_KEY=$YOUR_API_KEY medical-dosage-agent
 ## Contributing
 
 1. Create feature branch: `git checkout -b feature/your-feature`
-2. Make changes with conventional commits:
+2. Commit your changes using conventional commit prefixes (examples below):
    ```bash
    git commit -m "feature: add new dosage guideline"
    git commit -m "fix: correct dosage validation logic"
@@ -318,10 +318,10 @@ See [REPORT.md](REPORT.md) for:
 
 ## Support
 
-For issues or questions:
+If you run into issues or have questions:
 1. Check [GitHub Issues](https://github.com/HayatoR28/Final-Project/issues)
 2. Review documentation in `/docs`
-3. Check test examples in `/tests`
+3. Explore test examples in `/tests`
 
 ## License
 
